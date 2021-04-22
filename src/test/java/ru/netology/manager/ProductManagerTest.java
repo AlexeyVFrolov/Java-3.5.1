@@ -60,13 +60,4 @@ class ProductManagerTest {
         assertArrayEquals(expected, manager.searchBy("Hyperion"));
     }
 
-    @Test
-    public void shouldNotFindIfTheProductIsNotBookOrSmartPhone(){
-        Product[] expected = new Product[] {firstProduct, forthProduct};
-        Product fifthProduct = new Product (5, "Hyperion", 0);
-
-        manager.addProduct(fifthProduct);
-        assertArrayEquals(expected, manager.searchBy("Hyperion"));
-    }
-
 }
